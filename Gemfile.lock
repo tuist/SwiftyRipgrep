@@ -1,0 +1,19 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    colorize (0.8.1)
+    parslet (2.0.0)
+    rainbow (3.1.1)
+    toml (0.3.0)
+      parslet (>= 1.8.0, < 3.0.0)
+
+PLATFORMS
+  arm64-darwin-21
+
+DEPENDENCIES
+  colorize (~> 0.8.1)
+  rainbow (~> 3.1)
+  toml (~> 0.3.0)
+
+BUNDLED WITH
+   2.4.1
