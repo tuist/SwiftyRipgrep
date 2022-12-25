@@ -1,0 +1,4 @@
+module SwiftyRipgrep {
+    header "swiftyripgrep.h"
+    export *
+}
