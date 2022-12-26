@@ -77,7 +77,7 @@ Dir.mktmpdir do |tmp_dir|
   args = [
     "zip",
     "-r", zip_path,
-    xcframework_path
+    "Ripgrep.xcframework"
   ]
   run_command(args, cwd: File.dirname(xcframework_path))
   sha256 = `openssl dgst -sha256 #{zip_path}`.split(" ").last

@@ -19,7 +19,7 @@ let package = Package(
             .binaryTarget(
                 name: "Ripgrep",
                 url: "https://github.com/chimerarun/SwiftyRipgrep/releases/download/13.0.0/Ripgrep.xcframework.zip",
-                checksum: "c228997e1855eb7e10b10fe4d4ccd77905a205eba3deb5bdc2853b2beb3081a3"
+                checksum: "e71af29f3d66fb6338b9f12de049252891ebe663ad4bc168d3333862f156760e"
             )
         ]
 )

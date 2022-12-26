@@ -20,6 +20,8 @@ let package = Package(
 )
 ```
 
+> **Version:** The version of SwiftyRipgrep aligns with the version of [Ripgrep](https://github.com/BurntSushi/ripgrep) wrapped so version 13.0.0 indicates that the Swift package is using the same version of Ripgrep.
+
 ## Development
 
 ### System dependencies
