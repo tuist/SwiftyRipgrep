@@ -4,7 +4,7 @@
 ![iOS Badge](https://img.shields.io/badge/iOS-13-green)
 ![macOS Badge](https://img.shields.io/badge/macOS-11-green)
 
-This repository contains a Swift package that wraps [ripgrep](https://github.com/BurntSushi/ripgrep) to be used programmatically from Apple platforms.
+This repository contains a Swift package that wraps [ripgrep](https://github.com/BurntSushi/ripgrep) to be used programmatically in iOS (device and simulator) and macOS.
 
 ## Usage
 
