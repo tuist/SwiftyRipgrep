@@ -64,23 +64,13 @@ Dir.mktmpdir do |tmp_dir|
   end
 
   puts "Building xcframework".green.bold
-  xcframework_path = File.join(tmp_dir, "./Ripgrep.xcframework")
+  xcframework_path = File.join(__dir__, "..", "./vendor/Ripgrep.xcframework")
+  FileUtils.rm_rf(xcframework_path)
   args = [
     "xcodebuild", "-create-xcframework",
     *fat_binaries.map { |path| ["-library", path, "-headers", File.join(__dir__, "../include")] }.flatten,
     "-output", xcframework_path
   ]
   run_command(args)
-
-  puts "Creating a zip with the .xcframework".green.bold
-  zip_path = File.join(__dir__, "../Ripgrep.xcframework.zip")
-  args = [
-    "zip",
-    "-r", zip_path,
-    "Ripgrep.xcframework"
-  ]
-  run_command(args, cwd: File.dirname(xcframework_path))
-  sha256 = `openssl dgst -sha256 #{zip_path}`.split(" ").last
-  puts "SHA256: #{sha256}"
 end
 

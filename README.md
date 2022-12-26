@@ -37,3 +37,5 @@ let package = Package(
 - [Cocoa CPU Architectures](https://docs.elementscompiler.com/Platforms/Cocoa/CpuArchitectures/)
 - [swift-create-xcframework GitHub action](https://github.com/marketplace/actions/swift-create-xcframework)
 - [XCFrameworks](https://kean.blog/post/xcframeworks-caveats)
+- [Recipe for Calling Swift Closures from Asynchronous Rust Code](https://www.nickwilcox.com/blog/recipe_swift_rust_callback/)
+- [Building and Deploying a Rust library on iOS](https://mozilla.github.io/firefox-browser-architecture/experiments/2017-09-06-rust-on-ios.html)
