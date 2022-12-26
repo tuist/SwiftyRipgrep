@@ -8,9 +8,9 @@ require "debug"
 require "rainbow/refinement"
 using Rainbow
 
-def run_command(args)
+def run_command(args, cwd: File.join(__dir__, ".."))
   puts "  Running: #{args.join(' ')}".cyan
-  stdout, stderr, status = Open3.capture3(*args)
+  stdout, stderr, status = Open3.capture3(*args, chdir: cwd)
   raise StandardError, stderr unless status.success?
 end
 
@@ -21,8 +21,7 @@ supported_targets = rust_toolchain["toolchain"]["targets"]
 args = [
   "cbindgen",
   "--lang", "c",
-  "--output", File.join(__dir__, "../include/ripgrep.h"),
-  chdir: File.join(__dir__, "..")
+  "--output", File.join(__dir__, "../include/ripgrep.h")
 ]
 run_command(args)
 
@@ -80,7 +79,7 @@ Dir.mktmpdir do |tmp_dir|
     "-r", zip_path,
     xcframework_path
   ]
-  run_command(args)
+  run_command(args, cwd: File.dirname(xcframework_path))
   sha256 = `openssl dgst -sha256 #{zip_path}`.split(" ").last
   puts "SHA256: #{sha256}"
 end

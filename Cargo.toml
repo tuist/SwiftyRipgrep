@@ -8,3 +8,4 @@ name = "ripgrep"
 crate-type = [ "staticlib" ]
 
 [dependencies]
+grep = "0.2"
