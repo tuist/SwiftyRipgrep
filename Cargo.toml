@@ -1,10 +1,10 @@
 [package]
-name = "swifty-ripgrep"
+name = "ripgrep"
 version = "0.1.0"
 edition = "2021"
 
 [lib]
-name = "swiftyripgrep"
+name = "ripgrep"
 crate-type = [ "staticlib" ]
 
 [dependencies]

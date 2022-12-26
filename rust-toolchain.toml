@@ -1,11 +1,19 @@
 [toolchain]
 channel = "nightly"
 targets = [
-    "aarch64-apple-ios",
     "x86_64-apple-darwin",
     "aarch64-apple-darwin",
-     "aarch64-apple-ios-sim",
-     "x86_64-apple-watchos-sim",
-     "aarch64-apple-watchos-sim",
-     "arm64_32-apple-watchos"
+    "x86_64-apple-ios",
+    "aarch64-apple-ios",
+    "aarch64-apple-ios-sim",
+    "armv7k-apple-watchos",
+    "arm64_32-apple-watchos",
+    "x86_64-apple-watchos-sim",
+    "aarch64-apple-watchos-sim",
+    "aarch64-apple-ios-macabi",
+    "x86_64-apple-ios-macabi"
+    # Rust doesn't provide the standard library for the following
+    # targets.
+    # "x86_64-apple-tvos",
+    # "aarch64-apple-tvos",
 ]
