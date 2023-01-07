@@ -32,6 +32,14 @@ We recommend the usage of [asdf](https://asdf-vm.com/) to install the dependenci
 - [Rust](https://rust.sh/)
 - [swift-bridge-cli](https://github.com/chinedufn/swift-bridge)
 
+### Generate the Swift Package
+
+The project uses [swift-bridge](https://chinedufn.github.io/swift-bridge/index.html), a Rust tool that leverages macros and other build-time tools to generate the Swift Package from the Rust code. If you change the Rust code or update Cargo dependencies you'll have to run `bin/generate.rb`. The script will update the `Package.swift` and the content under `Sources` and generate a `RustXcframework.xcframework` directory at the root.
+
+### Testing the generated Swift package
+
+The repository contains a Swift package under `fixture` that contains a tests target to test the public interface of the `SwiftyRipgrep` package generated at the root. You can run the tests by running `swift test --package-path ./fixture`
+
 ## References
 
 - [From Rust to Swift](https://betterprogramming.pub/from-rust-to-swift-df9bde59b7cd)
