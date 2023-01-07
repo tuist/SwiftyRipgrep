@@ -1,11 +1,15 @@
 [package]
-name = "ripgrep"
+name = "SwiftyRipgrep"
 version = "0.1.0"
 edition = "2021"
 
 [lib]
-name = "ripgrep"
+name = "SwiftyRipgrep"
 crate-type = [ "staticlib" ]
+
+[build-dependencies]
+swift-bridge-build = "0.1"
 
 [dependencies]
 grep = "0.2"
+swift-bridge = "0.1"

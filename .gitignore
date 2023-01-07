@@ -1,6 +1,5 @@
 /target
 /Cargo.lock
-Ripgrep.xcframework.zip
 # Created by https://www.toptal.com/developers/gitignore/api/swift,swiftpm,macos
 # Edit at https://www.toptal.com/developers/gitignore?templates=swift,swiftpm,macos
 

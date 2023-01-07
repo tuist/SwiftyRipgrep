@@ -1,21 +1,21 @@
-// swift-tools-version:5.3
+// swift-tools-version:5.5.0
 import PackageDescription
-import Foundation
 let package = Package(
-        name: "SwiftyRipgrep",
-        platforms: [
-            .iOS(.v13),
-            .macOS(.v11)
-        ],
-        products: [
-            .library(
-                name: "SwiftyRipgrep",
-                targets: ["SwiftyRipgrep"]),
-        ],
-        targets: [
-            .target(
-                name: "SwiftyRipgrep",
-                dependencies: ["Ripgrep"]),
-            .binaryTarget(name: "Ripgrep", path: "./vendor/Ripgrep.xcframework")
-        ]
+	name: "SwiftyRipgrep",
+	products: [
+		.library(
+			name: "SwiftyRipgrep",
+			targets: ["SwiftyRipgrep"]),
+	],
+	dependencies: [],
+	targets: [
+		.binaryTarget(
+			name: "RustXcframework",
+			path: "RustXcframework.xcframework"
+		),
+		.target(
+			name: "SwiftyRipgrep",
+			dependencies: ["RustXcframework"])
+	]
 )
+	

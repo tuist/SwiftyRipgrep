@@ -26,9 +26,11 @@ let package = Package(
 
 ### System dependencies
 
-- [**cbindgen**](https://github.com/eqrion/cbindgen): cbindgen creates C/C++11 headers for Rust libraries which expose a public C API.
-- Ruby
+We recommend the usage of [asdf](https://asdf-vm.com/) to install the dependencies necessary to contribute to this project:
 
+- [Ruby](https://www.ruby-lang.org/en/) 3.1.2
+- [Rust](https://rust.sh/)
+- [swift-bridge-cli](https://github.com/chinedufn/swift-bridge)
 
 ## References
 
@@ -39,3 +41,4 @@ let package = Package(
 - [XCFrameworks](https://kean.blog/post/xcframeworks-caveats)
 - [Recipe for Calling Swift Closures from Asynchronous Rust Code](https://www.nickwilcox.com/blog/recipe_swift_rust_callback/)
 - [Building and Deploying a Rust library on iOS](https://mozilla.github.io/firefox-browser-architecture/experiments/2017-09-06-rust-on-ios.html)
+- [The swift-bridge book](https://chinedufn.github.io/swift-bridge/)

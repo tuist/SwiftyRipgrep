@@ -1,4 +1,0 @@
-module Ripgrep {
-    header "ripgrep.h"
-    export *
-}
