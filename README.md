@@ -1,5 +1,6 @@
 # SwiftyRipgrep
 
+[![SwiftyRipgrep](https://github.com/gestaltmd/SwiftyRipgrep/actions/workflows/SwiftyRipgrep.yml/badge.svg)](https://github.com/gestaltmd/SwiftyRipgrep/actions/workflows/SwiftyRipgrep.yml)
 ![Platform](https://img.shields.io/badge/Platform-iOS%20%7C%20macOS-lightgrey)
 ![iOS Badge](https://img.shields.io/badge/iOS-13-green)
 ![macOS Badge](https://img.shields.io/badge/macOS-11-green)
