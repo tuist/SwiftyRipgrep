@@ -4,9 +4,10 @@ import SwiftyRipgrep
 class SwiftyRipGrepTests: XCTestCase {
     func test_itWorks() {
         // Given
-        let result = hello_rust().toString()
+        let subject = SwiftyRipgrep()
+        let result = subject.grep(term: "foo", options: .init(parallel: false))
         
         // Then
-        XCTAssertEqual(result, "Hello from Rust!")
+        XCTAssertEqual(result, ["Hello from Rust!"])
     }
 }

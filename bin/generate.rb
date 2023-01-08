@@ -60,8 +60,11 @@ package_sources_path = File.join(__dir__, "../Sources")
 package_swift_path = File.join(__dir__, "../Package.swift")
 
 FileUtils.rm_rf(xcframework_path) if File.exist?(xcframework_path)
-FileUtils.rm_rf(package_sources_path) if File.exist?(package_sources_path)
 FileUtils.rm(package_swift_path) if File.exist?(package_swift_path)
+
+Dir.glob(File.join(package_sources_path, "**/*.swift")).each do |source_file|
+  FileUtils.rm(source_file) unless source_file.include?("Public")
+end
 
 run_command([
   "swift-bridge-cli", "create-package",
@@ -73,3 +76,10 @@ run_command([
   "--mac-catalyst", File.join("target", "universal-ios_macabi", "release", "libSwiftyRipgrep.a"),
   "--name", "SwiftyRipgrep"
 ])
+
+Dir.glob(File.join(package_sources_path, "**/*.swift")).each do |source_file|
+  next if source_file.include?("Public")
+  content = File.read(source_file)
+  content.gsub!("public", "internal")
+  File.write(source_file, content)
+end
