@@ -1,6 +1,6 @@
 # SwiftyRipgrep
 
-[![SwiftyRipgrep](https://github.com/gestaltmd/SwiftyRipgrep/actions/workflows/SwiftyRipgrep.yml/badge.svg)](https://github.com/gestaltmd/SwiftyRipgrep/actions/workflows/SwiftyRipgrep.yml)
+[![SwiftyRipgrep](https://github.com/chimerarun/SwiftyRipgrep/actions/workflows/SwiftyRipgrep.yml/badge.svg)](https://github.com/chimerarun/SwiftyRipgrep/actions/workflows/SwiftyRipgrep.yml)
 ![Platform](https://img.shields.io/badge/Platform-iOS%20%7C%20macOS-lightgrey)
 ![iOS Badge](https://img.shields.io/badge/iOS-13-green)
 ![macOS Badge](https://img.shields.io/badge/macOS-11-green)
@@ -15,7 +15,7 @@ SwiftyRipgrep is distributed as a Swift Package. All you need to do is to add th
 let package = Package(
     ...
     dependencies: [
-        .package(url: "https://github.com/gestaltmd/SwiftyRipgrep.git", from: "13.0.0")
+        .package(url: "https://github.com/chimerarun/SwiftyRipgrep.git", from: "13.0.0")
     ],
     ...
 )
