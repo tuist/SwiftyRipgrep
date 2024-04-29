@@ -15,7 +15,7 @@ jobs:
     name: Test
     runs-on: macOS-12
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v4
       - name: Select Xcode
         run: sudo xcode-select -switch /Applications/Xcode_$(cat .xcode-version).app
       - name: Test
