@@ -8,7 +8,7 @@ name = "SwiftyRipgrep"
 crate-type = [ "staticlib" ]
 
 [build-dependencies]
-swift-bridge-build = "0.1"
+swift-bridge-build = "0.1.55"
 
 [dependencies]
 grep = "0.2"
