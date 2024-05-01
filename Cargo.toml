@@ -12,5 +12,5 @@ swift-bridge-build = "0.1"
 
 [dependencies]
 grep = "0.2"
-swift-bridge = "0.1"
+swift-bridge = "0.1.55"
 ripgrep = "13.0.0"
